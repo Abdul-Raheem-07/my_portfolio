@@ -1,0 +1,103 @@
+/* Navbar Base */
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #161513;
+  z-index: 1000;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+  font-size: 18px;
+  margin-left: 30%;   /* only for desktop */
+  line-height: 70px;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+.nav-menu li:hover {
+  color: #da7c25;
+  transform: scale(1.05);
+}
+
+/* Connect Button */
+.nav-connect {
+  padding: 8px 20px;
+  border-radius: 40px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: auto;
+}
+.nav-connect:hover {
+  transform: scale(1.1);
+  background: linear-gradient(267deg, #b923e1, #da7c25);
+  box-shadow: 0px 0px 15px rgba(218, 124, 37, 0.6);
+}
+
+/* Prevent overlap with sections */
+section {
+  scroll-margin-top: 80px; /* anchor fix */
+  padding-top: 80px;
+}
+
+/* ✅ Mobile */
+@media (max-width: 600px) {
+  .Navbar {
+    flex-direction: row;         /* row hi rakho */
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;                /* chhoti height */
+    padding: 0 15px;
+  }
+
+  .nav-menu {
+    flex-direction: row;         /* buttons inline */
+    gap: 15px;
+    margin-left: 0;              /* desktop offset hatao */
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .nav-connect {
+    margin-left: 0;
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) and (min-width: 601px) {
+  .Navbar {
+    padding: 0 20px;
+    height: 65px;
+  }
+
+  .nav-menu {
+    margin-left: 5%;     /* thoda adjust */
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .nav-connect {
+    padding: 7px 16px;
+    font-size: 14px;
+  }
+}

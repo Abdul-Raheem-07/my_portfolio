@@ -1,0 +1,212 @@
+.contact {
+  padding: 80px 150px;
+  color: white;
+  text-align: center;
+  background: #161513;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #da7c25;
+}
+
+.contact h2 .highlight {
+  color: #b923e1;
+}
+
+/* Cards Container */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* Single Card */
+.contact-card {
+  background: #222;
+  padding: 30px 40px;
+  border-radius: 15px;
+  min-width: 200px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  transition: 0.3s;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+
+  /* Equal height look */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: linear-gradient(267deg, #da7c25, #b923e1);
+  color: white;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.contact-card p,
+.contact-card a {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+/* Icons */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.contact-icons a {
+  color: #da7c25;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #b923e1;
+  transform: scale(1.2);
+}
+
+/* ✅ Contact Form */
+.contact-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.contact-form label {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  background: #222;
+  color: white;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 150px;
+}
+.contact-form label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #da7c25;
+  margin-bottom: 5px;
+  display: block;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.contact-form label:hover {
+  color: #b923e1;
+}
+.contact-form button {
+  background: linear-gradient(267deg, #da7c25, #b923e1);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(267deg, #b923e1, #da7c25);
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 60px 80px;
+  }
+
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact-cards {
+    gap: 20px;
+  }
+
+  .contact-card {
+    flex: 1 1 45%; /* 2 cards per row */
+    max-width: none;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 600px) {
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .contact h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 18px;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 14px;
+    color: #ccc;
+  }
+
+  .contact-icons a {
+    font-size: 24px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}

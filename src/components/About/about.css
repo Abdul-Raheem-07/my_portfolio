@@ -1,0 +1,204 @@
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 150px;
+  color: white;
+  text-align: left;
+  margin-top: 80px;
+}
+
+/* Content */
+.about-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #da7c25;
+  transition: 0.3s;
+}
+
+.about-content h2:hover {
+  color: #b923e1;
+  transform: scale(1.05);
+}
+
+.about-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.about-content p:hover {
+  color: white;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 2px solid #da7c25;
+  margin-bottom: 50px;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px) scale(1.02);
+  color: #fff;
+}
+
+.timeline-item span {
+  font-weight: bold;
+  color: #b923e1;
+}
+
+.timeline-item p {
+  margin: 5px 0;
+}
+
+.timeline-desc {
+  margin-top: 5px;
+  color: #ccc;
+  font-size: 16px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Show description on desktop hover */
+@media (min-width: 769px) {
+  .timeline-item:hover .timeline-desc {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+/* Show description on mobile when button clicked */
+.timeline-desc.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.timeline-btn {
+  margin-top: 5px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.timeline-btn:hover {
+  background: linear-gradient(267deg, #b923e1 0.36%, #da7c25);
+  transform: scale(1.05);
+}
+
+/* Skills */
+.skills {
+  margin-top: 30px;
+}
+
+.skill.highlight {
+  margin-top: 30px;
+}
+
+.skills h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #da7c25;
+}
+
+.skill {
+  margin-bottom: 20px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.skill:hover {
+  transform: scale(1.02);
+}
+
+.skill span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Skill Bars */
+.bar {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.bar div {
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1);
+  height: 100%;
+  transition: width 0.5s, background 0.5s;
+}
+
+.skill:hover .bar div {
+  background: linear-gradient(90deg, #b923e1, #da7c25, #b923e1);
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: -100px; }
+  100% { background-position: 200px; }
+}
+
+.skill small {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 14px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.skill:hover small {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 24px;
+  }
+
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .timeline-item {
+    transform: none !important;
+  }
+
+  .timeline-item span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .timeline-btn {
+    margin: 8px auto 0 auto;
+  }
+}
