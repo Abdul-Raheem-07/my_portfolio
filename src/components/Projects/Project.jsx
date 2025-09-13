@@ -26,9 +26,9 @@ const projects = [
   {
     title: "E-commerce Site",
     description: "Responsive e-commerce front-end.",
-    image: ecommerce,
-    demoLink: "https://your-ecommerce.vercel.app",
-    githubLink: "https://github.com/yourname/ecommerce-site"
+    // image: ecommerce,
+    // demoLink: "https://your-ecommerce.vercel.app",
+    // githubLink: "https://github.com/yourname/ecommerce-site"
   },
   {
     title: "Digital Clock",
