@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Project.css";
-//pics
+
+// Import images the React way
 import proj1 from "../../assets/proj1.jpg";
-import weatherLogo from "../../assets/Weather-App-Logo.png";
-import ecommerceLogo from "../../assets/ecommerce.png";
-import clockLogo from "../../assets/Clock-App.png";
-import calcLogo from "../../assets/Calculator-App-Logo.png";
+import weatherApp from "../../assets/Weather-App-Logo.png";
+import ecommerce from "../../assets/ecommerce.png";
+import clockApp from "../../assets/Clock-App.png";
+import calculator from "../../assets/Calculator-App-Logo.png";
 
 const projects = [
   {
@@ -13,36 +14,36 @@ const projects = [
     description: "Classic Stone Paper Scissors game in JavaScript.",
     image: proj1,
     demoLink: "https://stone-paper-scissor-game-inky.vercel.app/",
-    githubLink: "https://github.com/Abdul-Raheem-07/stone-paper-scissor-game.git",
+    githubLink: "https://github.com/Abdul-Raheem-07/stone-paper-scissor-game.git"
   },
   {
     title: "Weather App",
     description: "Weather forecast app using API integration.",
-    image: weatherLogo,
+    image: weatherApp,
     demoLink: "https://weather-app-bkgr.vercel.app/",
-    githubLink: "https://github.com/Abdul-Raheem-07/Weather-App.git",
+    githubLink: "https://github.com/Abdul-Raheem-07/Weather-App.git"
   },
   {
     title: "E-commerce Site",
     description: "Responsive e-commerce front-end.",
-    image: ecommerceLogo,
+    image: ecommerce,
     demoLink: "https://your-ecommerce.vercel.app",
-    githubLink: "https://github.com/yourname/ecommerce-site",
+    githubLink: "https://github.com/yourname/ecommerce-site"
   },
   {
     title: "Digital Clock",
     description: "A simple digital clock app built with JS.",
-    image: clockLogo,
+    image: clockApp,
     demoLink: "https://github.com/Abdul-Raheem-07/Clock.git",
-    githubLink: "https://github.com/yourname/digital-clock",
+    githubLink: "https://github.com/yourname/digital-clock"
   },
   {
     title: "Calculator",
     description: "A functional calculator made with JavaScript.",
-    image: calcLogo,
+    image: calculator,
     demoLink: "https://calculator-inky-nine-38.vercel.app/",
-    githubLink: "https://github.com/Abdul-Raheem-07/calculator.git",
-  },
+    githubLink: "https://github.com/Abdul-Raheem-07/calculator.git"
+  }
 ];
 
 const Projects = () => {
