@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero.css";
+import "./hero.css";
 import heroImg from "../../assets/my-pic.jpg";
 import cvFile from "../../assets/Professional CV Resume.pdf"; // ✅ import CV
 
