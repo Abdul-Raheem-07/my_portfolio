@@ -1,44 +1,49 @@
 import React, { useState } from "react";
 import "./Project.css";
+//pics
+import proj1 from "../../assets/proj1.jpg";
+import weatherLogo from "../../assets/Weather-App-Logo.png";
+import ecommerceLogo from "../../assets/ecommerce.png";
+import clockLogo from "../../assets/Clock-App.png";
+import calcLogo from "../../assets/Calculator-App-Logo.png";
 
 const projects = [
   {
     title: "Stone Paper Scissors",
     description: "Classic Stone Paper Scissors game in JavaScript.",
-    image: "src/assets/proj1.jpg",
-    demoLink: "https://stone-paper-scissor-game-inky.vercel.app/", // hosted link
-    githubLink: "https://github.com/Abdul-Raheem-07/stone-paper-scissor-game.git"
+    image: proj1,
+    demoLink: "https://stone-paper-scissor-game-inky.vercel.app/",
+    githubLink: "https://github.com/Abdul-Raheem-07/stone-paper-scissor-game.git",
   },
   {
     title: "Weather App",
     description: "Weather forecast app using API integration.",
-    image: "src/assets/Weather-App-Logo.png",
+    image: weatherLogo,
     demoLink: "https://weather-app-bkgr.vercel.app/",
-    githubLink: "https://github.com/Abdul-Raheem-07/Weather-App.git"
+    githubLink: "https://github.com/Abdul-Raheem-07/Weather-App.git",
   },
   {
     title: "E-commerce Site",
     description: "Responsive e-commerce front-end.",
-    image: "/assets/ecommerce.png",
+    image: ecommerceLogo,
     demoLink: "https://your-ecommerce.vercel.app",
-    githubLink: "https://github.com/yourname/ecommerce-site"
+    githubLink: "https://github.com/yourname/ecommerce-site",
   },
-    {
+  {
     title: "Digital Clock",
     description: "A simple digital clock app built with JS.",
-    image: "src/assets/Clock-App.png",
+    image: clockLogo,
     demoLink: "https://github.com/Abdul-Raheem-07/Clock.git",
-    githubLink: "https://github.com/yourname/digital-clock"
+    githubLink: "https://github.com/yourname/digital-clock",
   },
   {
     title: "Calculator",
     description: "A functional calculator made with JavaScript.",
-    image: "src/assets/Calculator-App-Logo -.png",
+    image: calcLogo,
     demoLink: "https://calculator-inky-nine-38.vercel.app/",
-    githubLink: "https://github.com/Abdul-Raheem-07/calculator.git"
-  }
+    githubLink: "https://github.com/Abdul-Raheem-07/calculator.git",
+  },
 ];
-
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
@@ -62,7 +67,6 @@ const Projects = () => {
               <p>{p.description}</p>
 
               <div className="project-actions">
-                {/* Play button - always open in new tab */}
                 {p.demoLink ? (
                   <a
                     className="btn primary"
@@ -78,7 +82,6 @@ const Projects = () => {
                   </button>
                 )}
 
-                {/* GitHub button */}
                 <a
                   className="btn outline"
                   href={p.githubLink}
